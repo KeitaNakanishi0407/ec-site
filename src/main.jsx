@@ -11,11 +11,12 @@ import Zundamon from './components/Zondamon.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header />
-    {/* infoエリア */}
-    <Info />
-    <App />
-    <List />
-    <Zundamon />
+    <main>
+      <Info />
+      <App />
+      <List />
+      <Zundamon />
+    </main>
     <Footer />
   </React.StrictMode>,
 )

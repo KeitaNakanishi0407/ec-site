@@ -1,14 +1,16 @@
 import { useState } from 'react'
-import './App.css'
+import test from './App.module.scss'
 import { Button } from '@mui/material';
 import 'normalize.css';
+import Slider from './components/Slider.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>MEW MEW</h1>
+      <h1 className={test.concept_title}>クリエイターによる創作の総合マーケット 秘宝館</h1>
+      <Slider />
       <Button color="secondary">Secondary</Button>
       <Button variant="contained" color="success">
         Success
