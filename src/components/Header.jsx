@@ -1,21 +1,23 @@
-import './Header.css'
-import Nav from './Nav.jsx'
+import header from './Header.module.scss'
+import Language from './Language.jsx'
 
 function Header() {
 
   return (
     <>
       <header>
-        <nav className='nav'>
-          <div>
+        <nav className={header.nav}>
+          <div className={header.nav_left}>
             <a><img alt="秘宝館" width={'60px'} src="./src/assets/logo.svg" /></a>
           </div>
-          <ul className='nav_items'>
-            <li className='nav_item'>ログイン</li>
-            <li className='nav_item'>秘宝館とは</li>
-            <li className='nav_item'>作品を出品しよう</li>
-          </ul>
-          <Nav />
+          <div className={header.nav_right}>
+            <ul className={header.nav_items}>
+              <li className={header.nav_item}>ログイン</li>
+              <li className={header.nav_item}>秘宝館とは</li>
+              <li className={header.nav_item}>作品を出品しよう</li>
+            </ul>
+            <Language />
+          </div>
         </nav>
       </header>
     </>

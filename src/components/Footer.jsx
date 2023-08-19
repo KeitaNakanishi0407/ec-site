@@ -4,7 +4,12 @@ function Footer() {
   return (
     <>
       <footer>
-        <p>test</p>
+        <div>
+          <div>
+            <h3>秘宝館で「売りたい」</h3>
+            <></>
+          </div>
+        </div>
       </footer>
     </>
   )

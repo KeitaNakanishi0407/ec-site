@@ -1,0 +1,22 @@
+.nav {
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav_right {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  margin-right: 2rem;
+}
+
+.nav_items {
+  display: flex;
+}
+
+.nav_item {
+  width: auto;
+  font-size: 1.4rem;
+}
