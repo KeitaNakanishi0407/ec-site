@@ -3,29 +3,30 @@ import '@splidejs/splide/css'; // デフォルトのテーマを読み込み（�
 import './Slider.scss';
 
 const Slider = () => {
+  const imgPath ="./src/assets/banner/"
   const slideData = [
     {
-      img: "./src/assets/banner/hokusai.png",
+      img: "hokusai.png",
       alt: "FGO 葛飾北斎 特集"
     },
     {
-      img: "./src/assets/banner/C102.png",
+      img: "C102.png",
       alt: "C102 あの夏へ"
     },
     {
-      img: "./src/assets/banner/HeavenBurnsRed.png",
+      img: "HeavenBurnsRed.png",
       alt: "HeavenBurnsRed"
     },
     {
-      img: "./src/assets/banner/skillUp.png",
+      img: "skillUp.png",
       alt: "イラストスキルアップ 特集"
     },
     {
-      img: "./src/assets/banner/vtuber.png",
+      img: "vtuber.png",
       alt: "熱闘!! Vtuber甲子園!!"
     },
     {
-      img: "./src/assets/banner/spell.png",
+      img: "spell.png",
       alt: "呪文のコツ 総まとめ!!"
     }
   ];
@@ -46,7 +47,7 @@ const Slider = () => {
         >
           {slideData.map((slide, index) => (
             <SplideSlide key={index}>
-              <img className="slide-img" src={slide.img} alt={slide.alt} />
+              <img className="slide-img" src={imgPath + slide.img} alt={slide.alt} />
             </SplideSlide>
           ))}
 
