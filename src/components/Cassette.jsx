@@ -1,82 +1,39 @@
+import { useContext } from 'react';
 import styles from './Cassette.module.scss';
+import CassetteDataContext from '../contexts/CassetteDataContext';
 
-function Cassette({type= "category", data = [] }) {
+function Cassette() {
+  const { type, data } = useContext(CassetteDataContext);
   const iconPath = "./src/assets/icon/"
-  const categoryCassetteData = [
-    {
-      href:'',
-      img: 'comic.png',
-      title: '漫画',
-    },
-    {
-      href:'',
-      img: 'picture.png',
-      title: 'イラスト',
-    },
-    {
-      href:'',
-      img: 'book.png',
-      title: '小説・その他書籍',
-    },
-    {
-      href:'',
-      img: 'star.png',
-      title: 'グッズ',
-    },
-    {
-      href:'',
-      img: 'fashion.png',
-      title: 'ファッション',
-    },
-    {
-      href:'',
-      img: 'accessories.png',
-      title: 'アクセサリー',
-    },
-    {
-      href:'',
-      img: 'doll.png',
-      title: 'フィギュア',
-    },
-    {
-      href:'',
-      img: 'cosplay.png',
-      title: 'コスプレ',
-    },
-    {
-      href:'',
-      img: 'music.png',
-      title: '音楽',
-    },
-    {
-      href:'',
-      img: 'game.png',
-      title: 'ゲーム',
-    },
-    {
-      href:'',
-      img: 'microphone.png',
-      title: '音声作品',
-    },
-    {
-      href:'',
-      img: 'movie.png',
-      title: '映像作品',
-    },
 
-
-  ];
+  const renderByType = () => {
+    switch(type){
+      // 「カテゴリ」エリアのカセット
+      case "category":
+        return data.map((category, index) => (
+          <div className={styles.categoryWrap} key={index}>
+            <a href={category.href} className={styles.categoryCassette}>
+              <img className={styles.categoryImg} src={iconPath + category.img } />
+              <div className={styles.categoryTitle}>{category.title}</div>
+            </a>
+          </div>
+        ));
+      
+      // 「人気のタグ」エリアのカセット
+      case "tag":
+        return data.map((tag, index) => (
+          <div className={styles.tagWrap} key={index}>
+            <a href={tag.href} className={styles.tagCassette}>
+              <div className={styles.tagTitle}>{tag.title}</div>
+            </a>
+          </div>
+        ));
+    }
+  };
 
   return (
     <>
-      {categoryCassetteData.map((cassette, index) => (
-        <div className={styles.cassetteWrap} key={index}>
-          <a href={cassette.href} className={styles.cassette}>
-            <img className={styles.img} src={iconPath + cassette.img } />
-            <div className={styles.title}>{cassette.title}</div>
-          </a>
-        </div>
-      ))}
+      { renderByType() }
     </>
   )
 }

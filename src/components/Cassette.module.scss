@@ -1,12 +1,18 @@
-.cassetteWrap {
+.categoryWrap {
   min-width: 25%;
   padding: 0 5px;
 }
-.cassetteWrap:nth-child(n+5) {
+
+.tagWrap {
+  margin: 0 10px 10px 0;
+  width: fit-content;
+}
+
+.categoryWrap:nth-child(n+5){
   padding-top: 10px;
 }
 
-.cassette {
+.categoryCassette, .tagCassette {
   display: flex;
   font-weight: 700;
   background-color: #fff;
@@ -16,12 +22,16 @@
   height: 5rem;
 }
 
-.img {
+.tagCassette {
+  padding: 0.5rem 2rem;
+}
+
+.categoryImg {
   width: 24px;
   height: 24px;
   margin-right: 1rem;
 }
 
-.title {
+.categoryTitle, .tagTitle {
   font-size: 1.2rem;
 }
