@@ -1,6 +1,6 @@
-import categoryCassette from './CategoryCassette.module.scss';
+import styles from './Cassette.module.scss';
 
-function CategoryCassette() {
+function Cassette({type= "category", data = [] }) {
   const iconPath = "./src/assets/icon/"
   const categoryCassetteData = [
     {
@@ -70,10 +70,10 @@ function CategoryCassette() {
   return (
     <>
       {categoryCassetteData.map((cassette, index) => (
-        <div className={categoryCassette.cassetteWrap} key={index}>
-          <a href={cassette.href} className={categoryCassette.cassette}>
-            <img className={categoryCassette.img} src={iconPath + cassette.img } />
-            <div className={categoryCassette.title}>{cassette.title}</div>
+        <div className={styles.cassetteWrap} key={index}>
+          <a href={cassette.href} className={styles.cassette}>
+            <img className={styles.img} src={iconPath + cassette.img } />
+            <div className={styles.title}>{cassette.title}</div>
           </a>
         </div>
       ))}
@@ -81,4 +81,4 @@ function CategoryCassette() {
   )
 }
 
-export default CategoryCassette
+export default Cassette

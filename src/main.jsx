@@ -5,7 +5,6 @@ import Info from './components/Info.jsx'
 import App from './App.jsx'
 import Footer from './components/Footer.jsx'
 import './main.scss'
-import Zundamon from './components/Zondamon.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,7 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <main>
       <Info />
       <App />
-      <Zundamon />
     </main>
     <Footer />
   </React.StrictMode>,

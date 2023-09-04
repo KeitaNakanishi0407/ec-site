@@ -1,5 +1,5 @@
 import category from './Category.module.scss';
-import CategoryCassette from './CategoryCassette.jsx';
+import Cassette from './Cassette.jsx';
 
 function Category() {
 
@@ -10,7 +10,7 @@ function Category() {
         <div className={category.container}>
           <h2 className={category.section_head_title_large}>カテゴリ</h2>
           <div className={category.cassetteArea}>
-            <CategoryCassette />
+            <Cassette />
           </div>
         </div>
       </div>

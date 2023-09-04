@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import test from './App.module.scss'
-import { Button } from '@mui/material';
 import 'normalize.css';
 import Slider from './components/Slider.jsx';
 import Category from './components/Category.jsx';
