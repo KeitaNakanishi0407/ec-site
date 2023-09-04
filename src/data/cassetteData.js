@@ -1,4 +1,4 @@
-// カテゴリカセット情報
+// 【カテゴリ】カセット情報
 export const categoryCassetteData = [
   {
     href:'',
@@ -62,7 +62,7 @@ export const categoryCassetteData = [
   },
 ];
 
-// タグカセット情報
+// 【タグ】カセット情報
 export const tagCassetteData = [
   {
     href:'',

@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import styles from './Cassette.module.scss';
-import CassetteDataContext from '../contexts/CassetteDataContext';
+import CassetteContext from '../contexts/CassetteContext';
 
 function Cassette() {
-  const { type, data } = useContext(CassetteDataContext);
+  const { type, data } = useContext(CassetteContext);
   const iconPath = "./src/assets/icon/"
 
   const renderByType = () => {

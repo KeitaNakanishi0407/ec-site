@@ -19,3 +19,9 @@
   font-family: -apple-system, BlinkMacSystemFont, Avenir, Helvetica Neue, Segoe UI, Arial, ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳ Ｐゴシック, sans-serif;
   font-weight: 400;
 }
+
+.cassetteArea {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}

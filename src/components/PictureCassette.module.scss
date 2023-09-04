@@ -1,0 +1,47 @@
+.recommendCassetteWrap {
+  width: 170px;
+  margin: 0 11px 20px;
+}
+
+.tagWrap {
+  margin: 0 10px 10px 0;
+  width: fit-content;
+}
+
+.categoryCassette, .tagCassette {
+  display: flex;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 0.1875rem;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  height: 5rem;
+}
+
+.tagCassette {
+  padding: 0.5rem 2rem;
+}
+
+.recommendThumbnail {
+  width: 170px;
+  height: 170px;
+}
+
+.categoryTitle, .tagTitle {
+  font-size: 1.2rem;
+}
+
+.recommendAuthorArea {
+  align-items: center;
+}
+
+.recommendAuthorIcon {
+  width: 20px;
+  height: 20px;
+  margin: 2px 3px 0 0;
+}
+
+.recommendInfo {
+  display: flex;
+  justify-content: space-between;
+}
