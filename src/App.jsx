@@ -2,6 +2,7 @@ import app from './App.module.scss'
 import 'normalize.css';
 import { categoryCassetteData, tagCassetteData } from './data/cassetteData.js';
 import { recommendData, mangaData, illustData } from './data/pictureCassetteData.js';
+import { moreUrlData, categoryListData } from './data/moreInfoData.js';
 import CassetteContext from './contexts/CassetteContext.js';
 import PictureCassetteContext from './contexts/PictureCassetteContext.js';
 import Slider from './components/Slider.jsx';
@@ -25,10 +26,10 @@ function App() {
         <Section title="人気のタグ" ContentComponent={ Cassette } />
       </CassetteContext.Provider>
       <PictureCassetteContext.Provider value={{ type: "manga", data: mangaData }}>
-        <Section title="漫画" ContentComponent={ PictureCassette } />
+        <Section title="漫画" ContentComponent={ PictureCassette } moreUrl={moreUrlData.manga} categoryList={categoryListData.manga} />
       </PictureCassetteContext.Provider>
       <PictureCassetteContext.Provider value={{ type: "illust", data: illustData }}>
-        <Section title="イラスト" ContentComponent={ PictureCassette } />
+        <Section title="イラスト" ContentComponent={ PictureCassette } moreUrl={moreUrlData.illust} categoryList={categoryListData.illust} />
       </PictureCassetteContext.Provider>
     </>
   )

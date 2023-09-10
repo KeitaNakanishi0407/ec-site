@@ -30,12 +30,22 @@ function PictureCassette() {
       
       // 「漫画」「イラスト」エリアのカセット
       case "manga":
-      case "llust":
-        return data.map((tag, index) => (
-          <div className={styles.tagWrap} key={index}>
-            <a href={tag.href} className={styles.tagCassette}>
-              <div className={styles.tagTitle}>{tag.title}</div>
+      case "illust":
+        return data.map((manga, index) => (
+          <div className={styles.mangaCassetteWrap} key={index}>
+            <a href={manga.href} className={styles.recommendCassette}>
+              <img className={styles.mangaThumbnail} src={thumbnailPath + manga.thumbnail } />
             </a>
+            <div className={styles.recommendTitle}>{manga.genreName}</div>
+            <div className={styles.recommendTitle}>{manga.goodsName}</div>
+            <div className={styles.recommendAuthorArea}>
+              <img className={styles.recommendAuthorIcon} src={authorIconPath + manga.authorIcon} />
+              <span className={styles.recommendAuthorName}>{manga.authorName}</span>
+            </div>
+            <div className={styles.recommendInfo}>
+              <p>¥ {manga.price}</p>
+              <p>★ {manga.favorite}</p>
+            </div>
           </div>
         ));
     }
