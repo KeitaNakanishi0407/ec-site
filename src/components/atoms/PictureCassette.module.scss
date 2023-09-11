@@ -1,57 +1,53 @@
-.recommendCassetteWrap {
-  width: 170px;
-  margin: 0 11px 20px;
+.cassetteWrap{
+  &.recommend {
+    width: 170px;
+    margin: 0 11px 20px;
+  }
+  &.manga {
+    width: 200px;
+    margin: 0 20px 20px;
+  }
 }
 
-.mangaCassetteWrap {
-  width: 200px;
-  margin: 0 20px 20px;
+.thumbnail{
+  &.recommend {
+    width: 150px;
+    height: 160px;
+  }
+  &.manga {
+    width: 200px;
+    height: 200px;
+  }
 }
 
-.tagWrap {
-  margin: 0 10px 10px 0;
-  width: fit-content;
-}
-
-.categoryCassette, .tagCassette {
-  display: flex;
-  font-weight: 700;
-  background-color: #fff;
-  border-radius: 0.1875rem;
-  padding: 0.5rem 1rem;
-  align-items: center;
-  height: 5rem;
-}
-
-.tagCassette {
-  padding: 0.5rem 2rem;
-}
-
-.recommendThumbnail {
-  width: 150px;
-  height: 160px;
-}
-
-.mangaThumbnail {
-  width: 200px;
-  height: 200px;
-}
-
-.categoryTitle, .tagTitle {
-  font-size: 1.2rem;
-}
-
-.recommendAuthorArea {
+.authorArea {
   align-items: center;
 }
 
-.recommendAuthorIcon {
+.authorIcon {
   width: 20px;
   height: 20px;
   margin: 2px 3px 0 0;
 }
 
-.recommendInfo {
+.info {
   display: flex;
   justify-content: space-between;
 }
+
+.price {
+  color: #ff5c67;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.favorite {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.genreName {
+  color: #20b2aa;
+}
+

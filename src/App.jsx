@@ -14,11 +14,11 @@ function App() {
     <>
       <h1 className={app.concept_title}>クリエイターによる創作の総合マーケット 秘宝館</h1>
       <Slider />
-      <Section title="あなたにおすすめの商品" ContentComponent={ () => <PictureCassette type="recommend" data={recommendData} /> } />
-      <Section title="カテゴリ" ContentComponent={ () => <Cassette type="category" data={categoryCassetteData} />} />
-      <Section title="人気のタグ" ContentComponent={ () => <Cassette type="tag" data={tagCassetteData} />} />
-      <Section title="漫画" ContentComponent={ () => <PictureCassette type="manga" data={mangaData} />} moreUrl={moreUrlData.manga} />
-      <Section title="イラスト" ContentComponent={ () => <PictureCassette type="illust" data={illustData} />} moreUrl={moreUrlData.illust} />
+      <Section title="あなたにおすすめの商品" ContentComponent={ () => <PictureCassette type="recommend" pictureData={recommendData} /> } />
+      <Section title="カテゴリ" ContentComponent={ () => <Cassette type="category" cassetteData={categoryCassetteData} />} />
+      <Section title="人気のタグ" ContentComponent={ () => <Cassette type="tag" cassetteData={tagCassetteData} />} />
+      <Section title="漫画" ContentComponent={ () => <PictureCassette type="manga" pictureData={mangaData} />} moreUrl={moreUrlData.manga} />
+      <Section title="イラスト" ContentComponent={ () => <PictureCassette type="illust" pictureData={illustData} />} moreUrl={moreUrlData.illust} />
     </>
   )
 }

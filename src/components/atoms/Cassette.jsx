@@ -1,14 +1,14 @@
 import styles from './Cassette.module.scss';
 
 function Cassette(props) {
-  const { type, data } = props;
+  const { type, cassetteData } = props;
   const iconPath = "./src/assets/icon/"
 
   const renderByType = () => {
     switch(type){
       // 「カテゴリ」エリアのカセット
       case "category":
-        return data.map((category, index) => (
+        return cassetteData.map((category, index) => (
           <div className={styles.categoryWrap} key={index}>
             <a href={category.href} className={styles.categoryCassette}>
               <img className={styles.categoryImg} src={iconPath + category.img } />
@@ -19,7 +19,7 @@ function Cassette(props) {
       
       // 「人気のタグ」エリアのカセット
       case "tag":
-        return data.map((tag, index) => (
+        return cassetteData.map((tag, index) => (
           <div className={styles.tagWrap} key={index}>
             <a href={tag.href} className={styles.tagCassette}>
               <div className={styles.tagTitle}>{tag.title}</div>

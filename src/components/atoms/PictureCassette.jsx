@@ -1,59 +1,32 @@
 import styles from './PictureCassette.module.scss';
 
 function PictureCassette(props) {
-  const { type, data } = props;
+  const { type, pictureData } = props;
   const thumbnailPath = "./src/assets/thumbnail/",
   authorIconPath = "./src/assets/authorIcon/";
-  const renderByType = () => {
-    switch(type){
-      // 「あなたにおすすめの商品」エリアのカセット
-      case "recommend":
-        return data.map((recommend, index) => (
-          <div className={styles.recommendCassetteWrap} key={index}>
-            <a href={recommend.href} className={styles.recommendCassette}>
-              <img className={styles.recommendThumbnail} src={thumbnailPath + recommend.thumbnail } />
-            </a>
-            <div className={styles.recommendTitle}>{recommend.genreName}</div>
-            <div className={styles.recommendTitle}>{recommend.goodsName}</div>
-            <div className={styles.recommendAuthorArea}>
-              <img className={styles.recommendAuthorIcon} src={authorIconPath + recommend.authorIcon} />
-              <span className={styles.recommendAuthorName}>{recommend.authorName}</span>
-            </div>
-            <div className={styles.recommendInfo}>
-              <p>¥ {recommend.price}</p>
-              <p>★ {recommend.favorite}</p>
-            </div>
-          </div>
-        ));
-      
-      // 「漫画」「イラスト」エリアのカセット
-      case "manga":
-      case "illust":
-        return data.map((manga, index) => (
-          <div className={styles.mangaCassetteWrap} key={index}>
-            <a href={manga.href} className={styles.recommendCassette}>
-              <img className={styles.mangaThumbnail} src={thumbnailPath + manga.thumbnail } />
-            </a>
-            <div className={styles.recommendTitle}>{manga.genreName}</div>
-            <div className={styles.recommendTitle}>{manga.goodsName}</div>
-            <div className={styles.recommendAuthorArea}>
-              <img className={styles.recommendAuthorIcon} src={authorIconPath + manga.authorIcon} />
-              <span className={styles.recommendAuthorName}>{manga.authorName}</span>
-            </div>
-            <div className={styles.recommendInfo}>
-              <p>¥ {manga.price}</p>
-              <p>★ {manga.favorite}</p>
-            </div>
-          </div>
-        ));
-    }
-  };
+  function combineClasses(baseClass, typeClass) {
+    return `${baseClass} ${typeClass}`;
+  }
+  const cassetteWrap = combineClasses(styles.cassetteWrap, styles[type]);
+  const thumbnail = combineClasses(styles.thumbnail, styles[type]);
 
-  return (
-    <>
-      { renderByType() }
-    </>
-  )
+    return pictureData.map((data, index) => (
+      <div className={cassetteWrap} key={index}>
+        <a href={data.href}>
+          <img className={ thumbnail } src={thumbnailPath + data.thumbnail } />
+        </a>
+        <div className={styles.genreName}>{data.genreName}</div>
+        <div className={styles.recommendTitle}>{data.goodsName}</div>
+        <div className={styles.authorArea}>
+          <img className={styles.authorIcon} src={authorIconPath + data.authorIcon} />
+          <span className={styles.recommendAuthorName}>{data.authorName}</span>
+        </div>
+        <div className={styles.info}>
+          <p className={styles.price}>¥ {data.price}</p>
+          <p className={styles.favorite}>★ {data.favorite}</p>
+        </div>
+      </div>
+    ))
 }
 
 export default PictureCassette
