@@ -3,7 +3,7 @@
     width: 170px;
     margin: 0 11px 20px;
   }
-  &.manga {
+  &.manga ,.illust{
     width: 200px;
     margin: 0 20px 20px;
   }
@@ -11,23 +11,47 @@
 
 .thumbnail{
   &.recommend {
-    width: 150px;
+    width: 170px;
     height: 160px;
   }
-  &.manga {
+  &.manga ,.illust {
     width: 200px;
     height: 200px;
   }
 }
 
+.genreName {
+  color: #20b2aa;
+  font-size: 12px;
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+.goodsName {
+  font-size: 12px;
+  :hover {
+    text-decoration: underline;
+  }
+}
+
 .authorArea {
   align-items: center;
+  display: flex;
+  :hover {
+    text-decoration: underline;
+  }
 }
 
 .authorIcon {
   width: 20px;
   height: 20px;
   margin: 2px 3px 0 0;
+}
+
+.authorName {
+  font-style: 11px;
+  margin-top: 2px;
 }
 
 .info {
@@ -45,9 +69,37 @@
 .favorite {
   font-size: 12px;
   margin-top: 3px;
+  cursor: pointer;
+  position: relative;
 }
 
-.genreName {
-  color: #20b2aa;
+.favorite .popUp {
+  display: none;
+  position: absolute;
+  top: -30px; /* 上部に表示させる場合 */
+  left: 50%;
+  transform: translateX(-50%); /* センタリング */
+  background-color: #FFF;
+  border: 1px solid #000;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: nowrap; /* テキストを1行に保つ */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.favorite .popUp:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 0;
+  left: 10px;
+  border-color: #000 transparent transparent;
+  border-style: solid;
+  border-width: 5px 11px 0 0;
+}
+
+/* 親要素をhoverしたときにポップアップを表示します */
+.favorite:hover .popUp {
+  display: block;
+}

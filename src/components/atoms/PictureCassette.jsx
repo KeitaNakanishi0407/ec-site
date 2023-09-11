@@ -12,18 +12,18 @@ function PictureCassette(props) {
 
     return pictureData.map((data, index) => (
       <div className={cassetteWrap} key={index}>
-        <a href={data.href}>
+        <a href={data.goodsUrl}>
           <img className={ thumbnail } src={thumbnailPath + data.thumbnail } />
         </a>
-        <div className={styles.genreName}>{data.genreName}</div>
-        <div className={styles.recommendTitle}>{data.goodsName}</div>
+        <div className={styles.genreName}><a href={data.genreNameUrl}>{data.genreName}</a></div>
+        <div className={styles.goodsName}><a href={data.goodsUrl}>{data.goodsName}</a></div>
         <div className={styles.authorArea}>
           <img className={styles.authorIcon} src={authorIconPath + data.authorIcon} />
-          <span className={styles.recommendAuthorName}>{data.authorName}</span>
+          <p className={styles.authorName}><a href={data.authorUrl}>{data.authorName}</a></p>
         </div>
         <div className={styles.info}>
           <p className={styles.price}>¥ {data.price}</p>
-          <p className={styles.favorite}>★ {data.favorite}</p>
+          <p className={styles.favorite}>★ {data.favorite}<span className={styles.popUp}>ふぁぼ！</span></p>
         </div>
       </div>
     ))
