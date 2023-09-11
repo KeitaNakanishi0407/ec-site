@@ -182,14 +182,14 @@ export const mangaData = [
 export const illustData = [
   {
     href:'',
-    thumbnail: 'comic.png',
+    thumbnail: 'trpg.png',
     goodsUrl: '',
     genreName: '',
     genreNameUrl: '',
     goodsName: '漫画',
     authorName: '木星雑貨店',
     authorUrl: '',
-    authorIcon: '',
+    authorIcon: 'lady2.jpg',
     price: 3000,
     favorite: 10,
     c102: true,
