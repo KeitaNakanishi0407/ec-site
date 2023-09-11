@@ -5,18 +5,19 @@
   display: flex;
 }
 
-.nav_right {
+.navRight {
   align-items: center;
   display: flex;
   height: 60px;
   margin-right: 2rem;
 }
 
-.nav_items {
+.navItems {
   display: flex;
 }
 
-.nav_item {
+.navItem {
   width: auto;
   font-size: 1.4rem;
+  margin-right: 15px;
 }

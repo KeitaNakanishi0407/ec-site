@@ -1,8 +1,10 @@
 import footer from './Footer.module.scss'
 import { footerContents, footerSNSContents } from '../../data/footerData.js';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 function Footer() {
   const iconPath ="./src/assets/icon/"
+  const { language } = useLanguage(); 
 
   return (
     <>
@@ -11,10 +13,10 @@ function Footer() {
 
           {footerContents.map((content) =>(
             <nav key={content.id} className={footer.nav}>
-              <h3 className={footer.sub_title}>{content.bigTitle}</h3>
+              <h3 className={footer.sub_title}>{content.bigTitle[language]}</h3>
               {content.smallTitle.map((title, index) =>(
                 <div key={index} className={footer.small_title}>
-                  <a className={footer.link} href={title.href}>{title.text}</a>
+                  <a className={footer.link} href={title.href}>{title.text[language]}</a>
                 </div>
               ))}
             </nav>
