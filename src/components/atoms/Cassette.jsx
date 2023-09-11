@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styles from './Cassette.module.scss';
-import CassetteContext from '../contexts/CassetteContext';
+import CassetteContext from '../../contexts/CassetteContext';
 
 function Cassette() {
   const { type, data } = useContext(CassetteContext);

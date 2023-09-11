@@ -1,5 +1,4 @@
 import header from './Header.module.scss'
-import Language from './Language.jsx'
 
 function Header() {
 
@@ -16,7 +15,6 @@ function Header() {
               <li className={header.nav_item}>秘宝館とは</li>
               <li className={header.nav_item}>作品を出品しよう</li>
             </ul>
-            <Language />
           </div>
         </nav>
       </header>

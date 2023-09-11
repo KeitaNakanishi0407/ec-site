@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styles from './PictureCassette.module.scss';
-import PictureCassetteContext from '../contexts/PictureCassetteContext';
+import PictureCassetteContext from '../../contexts/PictureCassetteContext';
 
 function PictureCassette() {
   const { type, data } = useContext(PictureCassetteContext);

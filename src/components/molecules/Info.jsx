@@ -1,6 +1,6 @@
-import NewsItem from './NewsItem.jsx'
+import NewsItem from '../atoms/NewsItem.jsx'
 import info from './Info.module.scss';
-import { newsData } from '../data/infoData.js';
+import { newsData } from '../../data/infoData.js';
 
 function Info() {
 

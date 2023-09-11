@@ -1,5 +1,5 @@
 import footer from './Footer.module.scss'
-import { footerContents, footerSNSContents } from '../data/footerData.js';
+import { footerContents, footerSNSContents } from '../../data/footerData.js';
 
 function Footer() {
   const iconPath ="./src/assets/icon/"

@@ -5,10 +5,10 @@ import { recommendData, mangaData, illustData } from './data/pictureCassetteData
 import { moreUrlData, categoryListData } from './data/moreInfoData.js';
 import CassetteContext from './contexts/CassetteContext.js';
 import PictureCassetteContext from './contexts/PictureCassetteContext.js';
-import Slider from './components/Slider.jsx';
-import Section from './components/Section.jsx';
-import Cassette from './components/Cassette.jsx';
-import PictureCassette from'./components/PictureCassette.jsx';
+import Slider from './components/organisms/Slider.jsx';
+import Section from './components/organisms/Section.jsx';
+import Cassette from './components/atoms/Cassette.jsx';
+import PictureCassette from'./components/atoms/PictureCassette.jsx';
 
 function App() {
 

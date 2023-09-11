@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Header from './components/Header.jsx'
-import Info from './components/Info.jsx'
+import Header from './components/layouts/Header.jsx'
+import Info from './components/molecules/Info.jsx'
 import App from './App.jsx'
-import Footer from './components/Footer.jsx'
+import Footer from './components/layouts/Footer.jsx'
 import './main.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Header />
     <main>
       <Info />
-      <App />
+        <App />
     </main>
     <Footer />
   </React.StrictMode>,
