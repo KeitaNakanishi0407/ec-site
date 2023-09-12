@@ -1,6 +1,7 @@
 import header from './Header.module.scss'
 import { headerContents } from '../../data/headerData.js';
 import LanguageSelector from '../atoms/LanguageSelector';
+
 function Header() {
 
   return (

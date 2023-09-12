@@ -1,8 +1,10 @@
 import NewsItem from '../atoms/NewsItem.jsx'
 import info from './Info.module.scss';
 import { newsData } from '../../data/infoData.js';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 function Info() {
+  const { language } = useLanguage(); 
 
   return (
     <>
@@ -11,8 +13,8 @@ function Info() {
         <NewsItem
           key = { index }
           date = { news.date }
-          title ={ news.title }
-          description = { news.description }
+          title ={ news.title[language] }
+          description = { news.description[language] }
           link = { news.link }
         />
         ))}

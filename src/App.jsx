@@ -7,18 +7,43 @@ import Slider from './components/organisms/Slider.jsx';
 import Section from './components/organisms/Section.jsx';
 import Cassette from './components/atoms/Cassette.jsx';
 import PictureCassette from'./components/atoms/PictureCassette.jsx';
+import { useLanguage } from './contexts/LanguageContext';
 
 function App() {
+  const { language } = useLanguage(); 
+  const conceptTitle = language === "ja" ? 'クリエイターによる創作の総合マーケット 秘宝館' : 'Comprehensive Creative Market by Creators: Secret Treasure Hall';
+  const SectionTitle = {
+    recommend: {
+      ja: 'あなたにおすすめの商品',
+      en: 'Recommended Products for You'
+    },
+    category: {
+      ja: 'カテゴリ',
+      en: 'Category'
+    },
+    tag: {
+      ja: '人気のタグ',
+      en: "Popular Tags"
+    },
+    comic: {
+      ja: '漫画',
+      en: 'comic'
+    },
+    illust: {
+      ja: 'イラスト',
+      en: 'Illustrations'
+    }
+  }
 
   return (
     <>
-      <h1 className={app.concept_title}>クリエイターによる創作の総合マーケット 秘宝館</h1>
+      <h1 className={app.concept_title}>{ conceptTitle }</h1>
       <Slider />
-      <Section title="あなたにおすすめの商品" ContentComponent={ () => <PictureCassette type="recommend" pictureData={recommendData} /> } />
-      <Section title="カテゴリ" ContentComponent={ () => <Cassette type="category" cassetteData={categoryCassetteData} />} />
-      <Section title="人気のタグ" ContentComponent={ () => <Cassette type="tag" cassetteData={tagCassetteData} />} />
-      <Section title="漫画" ContentComponent={ () => <PictureCassette type="manga" pictureData={mangaData} />} moreUrl={moreUrlData.manga} />
-      <Section title="イラスト" ContentComponent={ () => <PictureCassette type="illust" pictureData={illustData} />} moreUrl={moreUrlData.illust} />
+      <Section title={SectionTitle.recommend[language]} ContentComponent={ () => <PictureCassette type="recommend" pictureData={recommendData} /> } />
+      <Section title={SectionTitle.category[language]} ContentComponent={ () => <Cassette type="category" cassetteData={categoryCassetteData} />} />
+      <Section title={SectionTitle.tag[language]} ContentComponent={ () => <Cassette type="tag" cassetteData={tagCassetteData} />} />
+      <Section title={SectionTitle.comic[language]} ContentComponent={ () => <PictureCassette type="manga" pictureData={mangaData} />} moreUrl={moreUrlData.manga} />
+      <Section title={SectionTitle.illust[language]} ContentComponent={ () => <PictureCassette type="illust" pictureData={illustData} />} moreUrl={moreUrlData.illust} />
     </>
   )
 }

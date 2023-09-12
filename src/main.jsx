@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Header />
       <main>
         <Info />
-          <App />
+        <App />
       </main>
       <Footer />
     </LanguageProvider>

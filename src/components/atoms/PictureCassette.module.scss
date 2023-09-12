@@ -3,7 +3,13 @@
     width: 170px;
     margin: 0 11px 20px;
   }
-  &.manga ,.illust{
+
+  &.manga {
+    width: 200px;
+    margin: 0 20px 20px;
+  }
+
+  &.illust {
     width: 200px;
     margin: 0 20px 20px;
   }
@@ -14,7 +20,13 @@
     width: 170px;
     height: 160px;
   }
-  &.manga ,.illust {
+
+  &.manga {
+    width: 200px;
+    height: 200px;
+  }
+
+  &.illust {
     width: 200px;
     height: 200px;
   }
