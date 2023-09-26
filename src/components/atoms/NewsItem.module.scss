@@ -1,0 +1,17 @@
+.news_item {
+  display: flex;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.news_date, .news_title, .news_description {
+  margin-right: 1rem;
+}
+
+.news_title {
+  font-weight: bold;
+}
+
+.link {
+  color: orangered;
+}

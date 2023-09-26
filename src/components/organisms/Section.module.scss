@@ -1,0 +1,38 @@
+.section {
+  background-color: #f1f5f8;
+  padding: 5rem;
+  border-top: 1px solid #dcdcdc;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.sectionTop {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  color: #252f3d;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, Avenir, Helvetica Neue, Segoe UI, Arial, ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳ Ｐゴシック, sans-serif;
+  font-weight: 400;
+}
+
+.cassetteArea {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.moreText {
+  font-size: 14px;
+  font-weight: bold;
+  color: #20b2aa;
+  text-align: center;
+}
