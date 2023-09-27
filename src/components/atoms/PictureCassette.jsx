@@ -4,8 +4,8 @@ import { useLanguage } from '../../contexts/LanguageContext';
 function PictureCassette(props) {
   const { language, setLanguage } = useLanguage();
   const { type, pictureData } = props;
-  const thumbnailPath = "./src/assets/thumbnail/",
-  authorIconPath = "./src/assets/authorIcon/";
+  const thumbnailPath = "./assets/thumbnail/",
+  authorIconPath = "./assets/authorIcon/";
   const likePop = language === 'ja' ? 'ふぁぼ！' : 'Like it!';
   const currency = language === 'ja' ? '¥' : '$';
   // moduleCSSにおけるclass名の合体

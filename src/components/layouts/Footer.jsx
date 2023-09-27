@@ -3,7 +3,7 @@ import { footerContents, footerSNSContents } from '../../data/footerData.js';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 function Footer() {
-  const iconPath ="./src/assets/icon/"
+  const iconPath ="./assets/icon/"
   const { language } = useLanguage(); 
 
   return (
