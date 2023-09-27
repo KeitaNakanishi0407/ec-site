@@ -9,7 +9,7 @@ function Header() {
       <header>
         <nav className={header.nav}>
           <div className={header.nav_left}>
-            <a><img alt="秘宝館" width={'60px'} src="./src/assets/logo/logo.svg" /></a>
+            <a><img alt="秘宝館" width={'60px'} src="./assets/logo/logo.svg" /></a>
           </div>
           <div className={header.navRight}>
             <ul className={header.navItems}>

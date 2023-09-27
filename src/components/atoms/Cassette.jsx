@@ -3,9 +3,8 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 function Cassette(props) {
   const { type, cassetteData } = props;
-  const iconPath = "./src/assets/icon/"
+  const iconPath = "./assets/icon/"
   const { language } = useLanguage(); 
-
   const renderByType = () => {
     switch(type){
       // 「カテゴリ」エリアのカセット
@@ -18,7 +17,6 @@ function Cassette(props) {
             </a>
           </div>
         ));
-      
       // 「人気のタグ」エリアのカセット
       case "tag":
         return cassetteData.map((tag, index) => (
@@ -30,7 +28,6 @@ function Cassette(props) {
         ));
     }
   };
-
   return (
     <>
       { renderByType() }

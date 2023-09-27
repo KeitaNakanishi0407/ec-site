@@ -3,7 +3,7 @@ import '@splidejs/splide/css'; // デフォルトのテーマを読み込み（�
 import './Slider.scss';
 
 const Slider = () => {
-  const imgPath ="./src/assets/banner/"
+  const imgPath ="./assets/banner/"
   const slideData = [
     {
       img: "hokusai.png",
